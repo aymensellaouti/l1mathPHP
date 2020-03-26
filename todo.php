@@ -29,11 +29,28 @@ $todos = $_SESSION['todos'];
     <link rel="stylesheet" href="assets/css/styles.css">
     <title>Todos</title>
 </head>
-<body>
+<body class="container">
 <div class="alert alert-primary">
 <h1>Liste des Todos</h1>
 </div>
-
+<?php
+ if (isset($_GET['successMessage'])) {
+    echo "<div class='alert alert-success'> ${_GET['successMessage']}'</div>";
+} else if (isset($_GET['errorMessage'])) {
+     echo "<div class='alert alert-danger'> ${_GET['errorMessage']}'</div>";
+ }
+?>
+<div>
+    <form method="post" action="addTodo.php" >
+        name : <input
+            name="name"
+            type="text" class="form-control">
+        Description : <input
+            name="description"
+            type="text" class="form-control">
+            <input type="submit" class="btn btn-primary">
+    </form>
+</div>
 <div class="row">
     <?php
     foreach ($todos as $todo) {
@@ -53,7 +70,7 @@ $todos = $_SESSION['todos'];
                 <p class="card-text">
                     <?=$todo['description']?>
                 </p>
-                <a href="#" class="card-link">
+                <a href="checkTodo.php?name=<?=$todo['name']?>" class="card-link">
                     <?php
                      if($todo['etat']==1) {
                          echo 'uncheck';
@@ -62,7 +79,8 @@ $todos = $_SESSION['todos'];
                      }
                     ?>
                 </a>
-                <a href="#" class="card-link"><i class="fa fa-trash" aria-hidden="true"></i></a>
+                <a href="deleteTodo.php?name=<?=$todo['name']?>" class="card-link">
+                    <i class="fa fa-trash" aria-hidden="true"></i></a>
             </div>
         </div>
     </div>

@@ -1,3 +1,6 @@
 .gold {
     color: gold;
 }
+a:hover {
+    color: red;
+}

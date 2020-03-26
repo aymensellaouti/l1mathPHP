@@ -2,13 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7fc77a45-62ea-4473-9bd4-13fe7533e815" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/assets/styles.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/todo.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addTodo.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/checkTodo.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/deleteTodo.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accueil.php" beforeDir="false" afterPath="$PROJECT_DIR$/accueil.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/connexion.php" beforeDir="false" afterPath="$PROJECT_DIR$/connexion.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/login.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/process.php" beforeDir="false" afterPath="$PROJECT_DIR$/process.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/todo.php" beforeDir="false" afterPath="$PROJECT_DIR$/todo.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,6 +47,9 @@
     <property name="list.type.of.created.stylesheet" value="CSS" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\1math2020\assets\css" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\xampp\htdocs\1math2020\support de cours" />
     </key>
@@ -69,7 +71,7 @@
       <workItem from="1585206962153" duration="620000" />
       <workItem from="1585207858455" duration="1000" />
       <workItem from="1585208034766" duration="599000" />
-      <workItem from="1585213566661" duration="3427000" />
+      <workItem from="1585213566661" duration="7100000" />
     </task>
     <task id="LOCAL-00001" summary="Séance du 19/3">
       <created>1584612432924</created>
@@ -78,7 +80,14 @@
       <option name="project" value="LOCAL" />
       <updated>1584612432926</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Séance du 26/3 Todo">
+      <created>1585217418764</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1585217418764</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -86,7 +95,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Séance du 19/3" />
-    <option name="LAST_COMMIT_MESSAGE" value="Séance du 19/3" />
+    <MESSAGE value="Séance du 26/3 Todo" />
+    <option name="LAST_COMMIT_MESSAGE" value="Séance du 26/3 Todo" />
   </component>
   <component name="WindowStateProjectService">
     <state x="487" y="0" key="#PHP" timestamp="1584605618957">
@@ -97,10 +107,11 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="449" y="148" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1536.824@0.0.1536.824" timestamp="1585207781098" />
-    <state x="391" y="0" key="CommitChangelistDialog2" timestamp="1584612428644">
+    <state x="391" y="0" key="CommitChangelistDialog2" timestamp="1585217409014">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="391" y="0" key="CommitChangelistDialog2/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1584612428644" />
+    <state x="391" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1585217409014" />
     <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1584780134266">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -110,10 +121,11 @@
     </state>
     <state x="604" y="332" key="NewPhpFileDialog/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1584612285747" />
     <state x="604" y="332" key="NewPhpFileDialog/0.0.1536.824@0.0.1536.824" timestamp="1585215480418" />
-    <state x="361" y="141" key="Vcs.Push.Dialog.v2" timestamp="1584612437323">
+    <state x="361" y="141" key="Vcs.Push.Dialog.v2" timestamp="1585217422354">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="361" y="141" key="Vcs.Push.Dialog.v2/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1584612437323" />
+    <state x="361" y="141" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1585217422354" />
     <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1584611789145">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
