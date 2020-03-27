@@ -32,6 +32,9 @@ $todos = $_SESSION['todos'];
 <body class="container">
 <div class="alert alert-primary">
 <h1>Liste des Todos</h1>
+<a href="resetTodo.php">
+    <i class="fa fa-sign-out" aria-hidden="true"></i>
+</a>
 </div>
 <?php
  if (isset($_GET['successMessage'])) {
