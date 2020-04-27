@@ -9,6 +9,5 @@ class PointColoree extends Point
         parent::__construct($abs, $ord);
         $this->color = $color;
     }
-
     private $color;
 }
