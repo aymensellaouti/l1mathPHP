@@ -7,16 +7,7 @@ $reponse = $bdd->query($req);
 $students = $reponse->fetchAll(PDO::FETCH_OBJ);
 ?>
 
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="assets/css/bootstrap.css">
-    <title>Document</title>
-</head>
+
 <body>
 <?php
     include 'layout fragments/header.php';
@@ -24,6 +15,18 @@ $students = $reponse->fetchAll(PDO::FETCH_OBJ);
 <ol class="breadcrumb">
     <li class="breadcrumb-item active">Liste des étudiants </li>
 </ol>
+<?php
+    if ($_SESSION['errors']) {
+?>
+<div class="alert alert-danger">
+    <?php
+        echo $_SESSION['errors'];
+        unset($_SESSION['errors'] );
+    ?>
+</div>
+        <?php
+    }
+        ?>
 <table class="table table-hover">
     <thead>
     <tr>
@@ -31,6 +34,7 @@ $students = $reponse->fetchAll(PDO::FETCH_OBJ);
         <th scope="col">name</th>
         <th scope="col">birthday</th>
         <th scope="col">section</th>
+        <th scope="col">Actions</th>
     </tr>
     </thead>
     <tbody>
@@ -45,11 +49,18 @@ $students = $reponse->fetchAll(PDO::FETCH_OBJ);
         <td><?= $student->name?></td>
         <td><?= $student->birthday?></td>
         <td><?= $student->section?></td>
+        <td>
+            <a href="studentDetail.php?id=<?= $student->id?>">
+                <i class="fa fa-info-circle fa-2x" aria-hidden="true"></i></td>
+            </a>
+
     </tr>
     <?php
         }
     ?>
     </tbody>
 </table>
-</body>
-</html>
+
+<?php
+include 'layout fragments/footer.php';
+?>
