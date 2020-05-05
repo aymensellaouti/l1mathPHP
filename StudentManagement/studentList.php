@@ -27,6 +27,25 @@ $students = $reponse->fetchAll(PDO::FETCH_OBJ);
         <?php
     }
         ?>
+
+<?php
+if ($_SESSION['success']) {
+    ?>
+    <div class="alert alert-success">
+        <?php
+        echo $_SESSION['success'];
+        unset($_SESSION['success'] );
+        ?>
+    </div>
+    <?php
+}
+?>
+
+    <div>
+    <a class="float-right m-3" href="addStudent.php">
+        <i class="fa fa-user-plus fa-2x" aria-hidden="true"></i>
+    </a>
+</div>
 <table class="table table-hover">
     <thead>
     <tr>
