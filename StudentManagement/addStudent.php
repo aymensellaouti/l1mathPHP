@@ -1,6 +1,6 @@
 <?php
 session_start();
-include_once 'auth/isAuthenticated.php';
+include_once 'auth/isAdmin.php';
 include_once 'connexionBD/getConnexion.php';
 $req="SELECT * from section";
 $reponse = $bdd->query($req);
@@ -8,7 +8,10 @@ $sections = $reponse->fetchAll(PDO::FETCH_OBJ);
 include 'layout fragments/header.php';
 ?>
 <div class="container">
-<form action="handleAddStudent.php" method="post" _lpchecked="1">
+<form action="handleAddStudent.php"
+      method="post"
+      enctype="multipart/form-data"
+      _lpchecked="1">
     <fieldset>
         <legend>Ajouter un étudiant</legend>
         <div class="form-group">
@@ -35,6 +38,15 @@ include 'layout fragments/header.php';
                     name="birthday"
                 >
             </div>
+        </div>
+        <div class="form-group">
+            <label for="image">Image</label>
+            <input
+                    type="file"
+                    class="form-control-file"
+                    id="image"
+                    name="image"
+                    aria-describedby="fileHelp">
         </div>
         <div class="form-group">
             <label for="section">Section</label>

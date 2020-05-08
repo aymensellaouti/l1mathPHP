@@ -18,6 +18,7 @@ if (isset($_POST['username'])&&isset($_POST['password'])) {
     $user = $reponse->fetch(PDO::FETCH_OBJ);
     if ($user) {
         $_SESSION['user'] = $username;
+        $_SESSION['userRole'] = $user->role;
         header('location:index.php');
     } else {
         $_SESSION['errorMessage'] = 'Veuillez vérifier vos credentials';

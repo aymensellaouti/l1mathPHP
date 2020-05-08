@@ -2,9 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7fc77a45-62ea-4473-9bd4-13fe7533e815" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/StudentManagement/addStudent.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/StudentManagement/handleAddStudent.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/StudentManagement/assets/css/bootstrapDark.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/StudentManagement/assets/images/default.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/StudentManagement/auth/isAdmin.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/StudentManagement/handleUpdateStudent.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/StudentManagement/studentDelete.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/StudentManagement/studentUpdate.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/StudentManagement/addStudent.php" beforeDir="false" afterPath="$PROJECT_DIR$/StudentManagement/addStudent.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/StudentManagement/handleAddStudent.php" beforeDir="false" afterPath="$PROJECT_DIR$/StudentManagement/handleAddStudent.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/StudentManagement/handleLogin.php" beforeDir="false" afterPath="$PROJECT_DIR$/StudentManagement/handleLogin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/StudentManagement/logout.php" beforeDir="false" afterPath="$PROJECT_DIR$/StudentManagement/logout.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/StudentManagement/studentList.php" beforeDir="false" afterPath="$PROJECT_DIR$/StudentManagement/studentList.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -44,14 +52,14 @@
     <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\1math2020\pages" />
+      <recent name="C:\xampp\htdocs\1math2020\assets\css" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\xampp\htdocs\1math2020\StudentManagement\assets\images" />
       <recent name="C:\xampp\htdocs\1math2020\StudentManagement\assets\css" />
       <recent name="C:\xampp\htdocs\1math2020\support de cours" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\xampp\htdocs\1math2020\pages" />
-      <recent name="C:\xampp\htdocs\1math2020\assets\css" />
     </key>
   </component>
   <component name="SvnConfiguration">
@@ -87,7 +95,10 @@
       <workItem from="1588521694834" duration="683000" />
       <workItem from="1588578660101" duration="901000" />
       <workItem from="1588586384197" duration="28000" />
-      <workItem from="1588683734805" duration="6115000" />
+      <workItem from="1588683734805" duration="6916000" />
+      <workItem from="1588848484240" duration="248000" />
+      <workItem from="1588859389057" duration="110000" />
+      <workItem from="1588942852980" duration="7879000" />
     </task>
     <task id="LOCAL-00001" summary="Séance du 19/3">
       <created>1584612432924</created>
@@ -138,7 +149,14 @@
       <option name="project" value="LOCAL" />
       <updated>1588687040696</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Add User">
+      <created>1588691339837</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1588691339837</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -152,13 +170,18 @@
     <MESSAGE value="PDO" />
     <MESSAGE value="Exemple Gestion plateforme de suivi des étudiants" />
     <MESSAGE value="user profile" />
-    <option name="LAST_COMMIT_MESSAGE" value="user profile" />
+    <MESSAGE value="Add User" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add User" />
   </component>
   <component name="WindowStateProjectService">
     <state x="487" y="0" key="#PHP" timestamp="1584605618957">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="487" y="0" key="#PHP/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1584605618957" />
+    <state x="527" y="202" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1588948240397">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="527" y="202" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1588948240397" />
     <state x="554" y="128" key="#com.intellij.ide.util.MemberChooser" timestamp="1587735995413">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -167,10 +190,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="449" y="148" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1536.824@0.0.1536.824" timestamp="1585207781098" />
-    <state x="391" y="0" key="CommitChangelistDialog2" timestamp="1588687039761">
+    <state x="391" y="0" key="CommitChangelistDialog2" timestamp="1588691339167">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="391" y="0" key="CommitChangelistDialog2/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1588687039761" />
+    <state x="391" y="0" key="CommitChangelistDialog2/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1588691339167" />
     <state x="391" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1588521733609" />
     <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1584780134266">
       <screen x="0" y="0" width="1536" height="824" />
@@ -184,19 +207,19 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="583" y="211" key="NewPhpClassDialog/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1587735740651" />
-    <state x="604" y="332" key="NewPhpFileDialog" timestamp="1588684613528">
+    <state x="604" y="332" key="NewPhpFileDialog" timestamp="1588948248154">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="604" y="332" key="NewPhpFileDialog/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1588684613528" />
+    <state x="604" y="332" key="NewPhpFileDialog/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1588948248154" />
     <state x="604" y="332" key="NewPhpFileDialog/0.0.1536.824@0.0.1536.824" timestamp="1585215480418" />
     <state x="277" y="55" key="SettingsEditor" timestamp="1585319363944">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="277" y="55" key="SettingsEditor/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1585319363944" />
-    <state x="361" y="141" key="Vcs.Push.Dialog.v2" timestamp="1588687044802">
+    <state x="361" y="141" key="Vcs.Push.Dialog.v2" timestamp="1588691341019">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="141" key="Vcs.Push.Dialog.v2/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1588687044802" />
+    <state x="361" y="141" key="Vcs.Push.Dialog.v2/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1588691341019" />
     <state x="361" y="141" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1585220955659" />
     <state x="483" y="185" key="git4idea.merge.GitPullDialog" timestamp="1587991132709">
       <screen x="0" y="0" width="1536" height="824" />
