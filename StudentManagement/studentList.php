@@ -9,16 +9,18 @@ include_once 'connexionBD/getConnexion.php';
 $role = $_SESSION['userRole'];
 //On crée notre requete qui permet de récupérer la liste des étudiants
 $req="SELECT e.id, e.name, e.birthday, e.image, s.designation AS section FROM section s, etudiant e where s.id = e.section_id";
-
+$tabFilter = array();
 if ($_GET['sectionId']) {
     $req.= ' and s.id = :sectionId';
+    $tabFilter['sectionId'] = $_GET['sectionId'];
+}
+
+if (isset($_POST['filter'])) {
+    $req.= ' and (e.name like :filter or s.designation like :filter)';
+    $tabFilter['filter'] = "%${_POST['filter']}%";
 }
 $reponse = $bdd->prepare($req);
-if (isset($_GET['sectionId'])) {
-    $tabFilter = array('sectionId' => $_GET['sectionId']);
-} else {
-    $tabFilter = array();
-}
+
 $reponse->execute($tabFilter);
 $students = $reponse->fetchAll(PDO::FETCH_OBJ);
 $section = $students[0]->section;
@@ -67,12 +69,21 @@ if ($role == 'admin') {
     ?>
 
     <div>
-        <a class="float-right m-3" href="addStudent.php">
-            <i class="fa fa-user-plus fa-2x" aria-hidden="true"></i>
-        </a>
+        <form class="form-inline" method="post">
+            <div class="form-group mx-lg-6 mb-2">
+                <input type="text" class="form-control"
+                       name="filter"
+                       placeholder="Veuillez renseigner votre filtre">
+            </div>
+            <button type="submit" class="btn btn-danger mb-2">Filtrer</button>
+            <a class="float-right m-3" href="addStudent.php">
+                <i class="fa fa-user-plus fa-2x" aria-hidden="true"></i>
+            </a>
+        </form>
+
     </div>
     <?php } ?>
-<table class="table table-hover">
+<table id="dataTableList" class="table table-hover">
     <thead>
     <tr>
         <th scope="col">id</th>

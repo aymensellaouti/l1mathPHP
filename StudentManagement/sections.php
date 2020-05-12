@@ -13,7 +13,7 @@ include 'layout fragments/header.php';
 <ol class="breadcrumb">
     <li class="breadcrumb-item active">Liste des sections </li>
 </ol>
-<table class="table table-hover">
+<table id="dataTableList" class="table table-hover">
     <thead>
     <tr>
         <th scope="col">id</th>
@@ -42,5 +42,7 @@ include 'layout fragments/header.php';
     ?>
     </tbody>
 </table>
-</body>
-</html>
+
+<?php
+include_once './layout fragments/footer.php';
+?>
