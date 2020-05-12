@@ -9,8 +9,19 @@ include_once 'connexionBD/getConnexion.php';
 $role = $_SESSION['userRole'];
 //On crée notre requete qui permet de récupérer la liste des étudiants
 $req="SELECT e.id, e.name, e.birthday, e.image, s.designation AS section FROM section s, etudiant e where s.id = e.section_id";
-$reponse = $bdd->query($req);
+
+if ($_GET['sectionId']) {
+    $req.= ' and s.id = :sectionId';
+}
+$reponse = $bdd->prepare($req);
+if (isset($_GET['sectionId'])) {
+    $tabFilter = array('sectionId' => $_GET['sectionId']);
+} else {
+    $tabFilter = array();
+}
+$reponse->execute($tabFilter);
 $students = $reponse->fetchAll(PDO::FETCH_OBJ);
+$section = $students[0]->section;
 ?>
 
 
@@ -21,7 +32,12 @@ $students = $reponse->fetchAll(PDO::FETCH_OBJ);
 ?>
 <div class="container">
 <ol class="breadcrumb">
-    <li class="breadcrumb-item active">Liste des étudiants </li>
+    <li class="breadcrumb-item active">Liste des étudiants
+        <?php
+        if ($_GET['sectionId'] && count($students)) {
+            echo " de la section $section";
+        } ?>
+    </li>
 </ol>
 <?php
     if ($_SESSION['errors']) {

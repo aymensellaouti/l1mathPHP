@@ -2,11 +2,12 @@
 session_start();
 // Récupérer le login et le password à travers $_POST
 include_once 'auth/isAdmin.php';
-
+// On a récupéré l'image uploadé via $_FILES
+// On a préparé le chemi de notre image
 $path = 'assets/uploads/'.uniqid().$_FILES['image']['name'];
-var_dump($_FILES);
-var_dump($path);
+//On a copié l'image de l'emplacement temporaire vers notre dossier upload
 copy($_FILES['image']['tmp_name'], $path);
+
 
 if (isset($_POST['name'])&&isset($_POST['birthday'])&&isset($_POST['section'])) {
     // Vérifier s'ils sont bon en requetant notre base de données

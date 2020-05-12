@@ -52,7 +52,7 @@ include 'layout fragments/header.php';
             <label for="section">Section</label>
             <select
                 required
-                name="section" class="form-control" id="section">
+                name="section" class="form-control select2" id="section">
                 <?php foreach ($sections as $section) { ?>
                     <option value="<?=$section->id ?>">
                         <?=$section->designation ?>
