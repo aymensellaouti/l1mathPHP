@@ -1,5 +1,6 @@
 <?php
 session_start();
+
 // on ouvre la session
 // On vérifie s'il est authentifié
 include_once 'auth/isAuthenticated.php';
@@ -10,7 +11,7 @@ $role = $_SESSION['userRole'];
 //On crée notre requete qui permet de récupérer la liste des étudiants
 $req="SELECT e.id, e.name, e.birthday, e.image, s.designation AS section FROM section s, etudiant e where s.id = e.section_id";
 $tabFilter = array();
-if ($_GET['sectionId']) {
+if (isset($_GET['sectionId'])) {
     $req.= ' and s.id = :sectionId';
     $tabFilter['sectionId'] = $_GET['sectionId'];
 }
@@ -23,7 +24,10 @@ $reponse = $bdd->prepare($req);
 
 $reponse->execute($tabFilter);
 $students = $reponse->fetchAll(PDO::FETCH_OBJ);
-$section = $students[0]->section;
+if (isset($students[0]))
+    $section = $students[0]->section;
+else
+    $section = null;
 ?>
 
 
@@ -36,13 +40,13 @@ $section = $students[0]->section;
 <ol class="breadcrumb">
     <li class="breadcrumb-item active">Liste des étudiants
         <?php
-        if ($_GET['sectionId'] && count($students)) {
-            echo " de la section $section";
+        if (isset($_GET['sectionId']) && count($students)) {
+            echo " de la section $section ";
         } ?>
     </li>
 </ol>
 <?php
-    if ($_SESSION['errors']) {
+    if (isset($_SESSION['errors'])) {
 ?>
 <div class="alert alert-danger">
     <?php
@@ -55,7 +59,7 @@ $section = $students[0]->section;
         ?>
 
 <?php
-if ($_SESSION['success']) {
+if (isset($_SESSION['success'])) {
     ?>
     <div class="alert alert-success">
         <?php

@@ -1,5 +1,5 @@
 <?php
-    session_start();
+//    session_start();
 ?>
 <!doctype html>
 <html lang="en">
@@ -15,10 +15,10 @@
     <link rel="stylesheet" href="https://cdn.datatables.net/1.10.21/css/dataTables.bootstrap4.min.css">
     <link rel="stylesheet" href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css">
     <link rel="stylesheet" href="https://cdn.datatables.net/buttons/1.6.2/css/buttons.dataTables.min.css">
-    <title>L1Math</title>
+    <title>Students Management System</title>
 </head>
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-    <a class="navbar-brand" href="#">L1Math</a>
+    <a class="navbar-brand" href="#">Students Management System</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01"
             aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>

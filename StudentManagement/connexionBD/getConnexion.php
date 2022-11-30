@@ -1,4 +1,5 @@
 <?php
+
 try {
     $bdd = new PDO("mysql:host=localhost;dbname=l1math",'root','',
         array(
